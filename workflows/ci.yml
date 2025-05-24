@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install React and testing plugins
+        run: |
+          npm install react react-dom @testing-library/react @testing-library/jest-dom @testing-library/user-event --save-dev
+          npm install eslint-plugin-react eslint-plugin-jsx-a11y eslint-plugin-testing-library eslint-plugin-jest-dom --save-dev
+
+      - name: Lint code
+        run: |
+          npm install eslint --no-save
+          npx eslint src/ || true
+
+      - name: Lint React code
+        run: |
+          npx eslint src/components/ --ext .js,.jsx || true
+
+      - name: Run tests
+        run: npm test
+
+      - name: Run React tests
+        run: |
+          npm test -- src/components/
+
+      - name: Build (HTML validation)
+        run: |
+          npm install html-validator-cli --no-save
+          npx html-validator --file=public/index.html --verbose
+
+      - name: Check formatting
+        run: |
+          npm install prettier --no-save
+          npx prettier --check "src/**/*.js" "public/**/*.html" "public/**/*.css"
+
+      - name: Generate React test coverage report
+        run: |
+          npm test -- --coverage --collectCoverageFrom=src/components/**/*.{js,jsx}
+          mkdir -p test-results/react-coverage
+          cp -r coverage/* test-results/react-coverage/
+
+      - name: Run API tests (example)
+        # To test APIs, use a tool like supertest or axios in your test files.
+        # Example: npm install --save-dev supertest
+        # Then, in your Jest tests, import supertest and test your API endpoints.
+        # See documentation: https://www.npmjs.com/package/supertest
+        run: echo "Add API tests using supertest or similar tools in your test files."
+
+      - name: Set up and test React (example)
+        # To add React testing, install React and testing libraries:
+        # npm install react react-dom @testing-library/react @testing-library/jest-dom --save-dev
+        # Then, create React components in a src/components/ directory and write tests in src/components/__tests__/
+        # Use 'npm test' to run your React tests with Jest.
+        # See documentation: https://testing-library.com/docs/react-testing-library/intro/
+        run: echo "Add React components and tests as described in the README."
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results/
+
+      - name: Upload React coverage report
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: react-coverage-report
+          path: test-results/react-coverage/
+
+      - name: Upload HTML validation report (example)
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: html-validation-report
+          path: html-validator-report/
+
+      - name: Download previous workflow artifacts (example)
+        uses: actions/download-artifact@v2
+        with:
+          name: test-results
+          path: downloaded-test-results/
+
+      - name: Download React coverage report (example)
+        uses: actions/download-artifact@v2
+        with:
+          name: react-coverage-report
+          path: downloaded-react-coverage/
+
+      - name: Show npm version and environment
+        run: |
+          node -v
+          npm -v
+          npm list --depth=0
