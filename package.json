@@ -1,0 +1,44 @@
+{
+  "name": "npm-course",
+  "version": "1.0.0",
+  "description": "A course on using npm, testing, and creating GitHub pages with HTML and JavaScript.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "live-server public",
+    "lint": "eslint src/",
+    "lint:react": "eslint src/components/ --ext .js,.jsx",
+    "format": "prettier --check 'src/**/*.js' 'public/**/*.html' 'public/**/*.css'",
+    "coverage": "jest --coverage --collectCoverageFrom=src/components/**/*.{js,jsx}",
+    "webhook:analytics": "node scripts/send-analytics-webhook.js"
+  },
+  "keywords": [
+    "npm",
+    "course",
+    "testing",
+    "github",
+    "html",
+    "javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "tipsAndTricks": [
+    "Use npm scripts to automate repetitive tasks.",
+    "Leverage eslint and prettier for code quality and formatting.",
+    "Use jest and @testing-library/react for robust testing.",
+    "Set up GitHub Actions for CI/CD and artifact management.",
+    "Add webhooks for analytics and monitoring.",
+    "Implement tracking cookies to log viewer activity for analytics."
+  ],
+  "analytics": {
+    "webhookUrl": "https://soloist.ai/dailyinvestors/webhook",
+    "trackingCookieName": "npmCourseViewer",
+    "trackingScript": "public/tracking.js"
+  }
+}
