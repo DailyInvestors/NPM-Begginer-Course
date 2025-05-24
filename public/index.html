@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPM Course</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner-accent"></div>
+        <div id="daily-investors-banner">
+            <img src="https://dummyimage.com/240x48/35424a/e8491d&text=Daily+Investors" alt="Daily Investors Logo" />
+            Daily Investors
+        </div>
+        <div class="corner-ribbon">DAILY INVESTORS</div>
+        <div class="banner-accent"></div>
+        <h1>Welcome to the NPM Course</h1>
+    </header>
+    <main>
+        <section id="features">
+            <h2>Features</h2>
+            <div id="feature-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 NPM Course</p>
+    </footer>
+    <script src="../src/index.js"></script>
+    <script src="tracking.js"></script>
+    <div id="test-instructions" style="position:fixed;top:10px;right:10px;z-index:9999;width:400px;max-height:90vh;overflow:auto;background:#fff;border:2px solid #d32f2f;border-radius:8px;box-shadow:0 2px 12px rgba(211,47,47,0.18);padding:18px 20px 18px 20px;">
+        <h2 style="color:#d32f2f;">🧪 Step-by-Step Test Instructions</h2>
+        <ol style="color:#b71c1c;">
+            <li><b>Install Node.js and npm:</b> <br>
+                <code>sudo apt update && sudo apt install nodejs npm</code>
+            </li>
+            <li><b>Install all project dependencies:</b> <br>
+                <code>npm install</code>
+            </li>
+            <li><b>Ensure <span style="color:#d32f2f;">axios</span> and <span style="color:#d32f2f;">jest</span> are installed:</b> <br>
+                <code>npm install --save-dev axios jest</code>
+            </li>
+            <li><b>Run all tests:</b> <br>
+                <code>npm test</code>
+            </li>
+            <li><b>Test: Feature Example</b>
+                <ul>
+                    <li>Checks if <code>featureFunction</code> returns expected output for normal and edge cases.</li>
+                </ul>
+            </li>
+            <li><b>Test: Google homepage is reachable</b>
+                <ul>
+                    <li>Sends a GET request to <code>https://www.google.com</code> and checks for status 200 and the word "Google" in the response.</li>
+                </ul>
+            </li>
+            <li><b>Test: Google search returns results</b>
+                <ul>
+                    <li>Requests <code>https://www.google.com/search?q=npm</code> and checks for status 200 and "npm" in the response.</li>
+                </ul>
+            </li>
+            <li><b>Test: Google favicon is accessible</b>
+                <ul>
+                    <li>Downloads <code>https://www.google.com/favicon.ico</code> and checks for status 200 and image content type.</li>
+                </ul>
+            </li>
+            <li><b>Test: Google robots.txt is accessible</b>
+                <ul>
+                    <li>Requests <code>https://www.google.com/robots.txt</code> and checks for status 200 and "User-agent" in the response.</li>
+                </ul>
+            </li>
+            <li><b>Test: Google advanced search page loads</b>
+                <ul>
+                    <li>Requests <code>https://www.google.com/advanced_search</code> and checks for status 200 and "Advanced Search".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Doodles page loads</b>
+                <ul>
+                    <li>Requests <code>https://www.google.com/doodles</code> and checks for status 200 and "Doodles".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google About page loads</b>
+                <ul>
+                    <li>Requests <code>https://about.google/</code> and checks for status 200 and "Google".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Maps homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://maps.google.com</code> and checks for status 200 and "Google".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google News homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://news.google.com</code> and checks for status 200 and "Google News".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Scholar homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://scholar.google.com</code> and checks for status 200 and "Scholar".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Trends homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://trends.google.com</code> and checks for status 200 and "Google Trends".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Play homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://play.google.com</code> and checks for status 200 and "Google Play".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Drive homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://drive.google.com</code> and checks for status 200 and "Google Drive".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Photos homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://photos.google.com</code> and checks for status 200 and "Google Photos".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Calendar homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://calendar.google.com</code> and checks for status 200 and "Google Calendar".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Contacts homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://contacts.google.com</code> and checks for status 200 and "Google Contacts".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Keep homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://keep.google.com</code> and checks for status 200 and "Google Keep".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Translate homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://translate.google.com</code> and checks for status 200 and "Google Translate".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Flights homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://www.google.com/flights</code> and checks for status 200 and "Flights".</li>
+                </ul>
+            </li>
+            <li><b>Test: Google Shopping homepage loads</b>
+                <ul>
+                    <li>Requests <code>https://shopping.google.com</code> and checks for status 200 and "Google Shopping".</li>
+                </ul>
+            </li>
+        </ol>
+        <p style="color:#d32f2f;font-weight:bold;">Each test checks the availability and expected content of a Google service. If a test fails, check your internet connection or if Google is blocking automated requests.</p>
+    </div>
+    <!-- Custom Buttons Section -->
+    <div id="custom-buttons-container" style="position:fixed;bottom:18px;left:18px;z-index:9999;display:flex;flex-direction:column;gap:12px;">
+        <a id="soloist-link" href="https://soloist.ai/dailyinvestors" target="_blank" rel="noopener noreferrer" style="background:#222;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.12);transition:background 0.2s;">Visit My Website</a>
+        <form id="donate-form" action="https://www.paypal.com/donate" method="post" target="_blank" style="margin:0;">
+            <input type="hidden" name="business" value="batestravis836@outlook.com" />
+            <input type="hidden" name="no_recurring" value="0" />
+            <input type="hidden" name="currency_code" value="USD" />
+            <button type="submit" style="background:#d32f2f;color:#fff;padding:12px 28px;border:none;border-radius:8px;font-weight:bold;box-shadow:0 2px 8px rgba(211,47,47,0.12);cursor:pointer;transition:background 0.2s;">Donate via PayPal</button>
+        </form>
+    </div>
+    <script>
+    // Simple obfuscation for email and links (not strong encryption, but deters scraping)
+    (function() {
+        // Obfuscate PayPal email
+        var donateForm = document.getElementById('donate-form');
+        if (donateForm) {
+            var email = ['batestravis836','@','outlook.com'].join('');
+            donateForm.querySelector('input[name="business"]').value = email;
+        }
+        // Obfuscate website link
+        var soloistLink = document.getElementById('soloist-link');
+        if (soloistLink) {
+            var url = ['https://','soloist','.ai','/','dailyinvestors'].join('');
+            soloistLink.href = url;
+        }
+    })();
+    </script>
+</body>
+</html>
