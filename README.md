@@ -1,4 +1,5 @@
 # npm Course
+(https://dailyinvestors.github.io/NPM-Begginer-Course/)
 
 Welcome to the npm Course! This project is designed to help you learn how to use npm, create web applications with HTML and JavaScript, and test your code effectively. Below are the details on how to set up and run the course.
 
