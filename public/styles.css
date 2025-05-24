@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    font-size: 18px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #e8491d 60%, #f1c40f 100%);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(232,73,29,0.12);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #3498db 60%, #9b59b6 100%);
+    box-shadow: 0 4px 16px rgba(52,152,219,0.18);
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Daily Investors Banner */
+#daily-investors-banner {
+    width: 100%;
+    background: linear-gradient(90deg, #e8491d 0%, #35424a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 28px 0 18px 0;
+    font-size: 2.2rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 4px 18px rgba(232,73,29,0.12);
+    position: relative;
+    z-index: 1001;
+}
+#daily-investors-banner img {
+    height: 48px;
+    vertical-align: middle;
+    margin-right: 18px;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Colorful, professional banners and accents */
+.banner-accent {
+    width: 100%;
+    height: 10px;
+    background: repeating-linear-gradient(90deg, #e8491d, #f1c40f 20%, #2ecc40 40%, #3498db 60%, #9b59b6 80%, #e8491d 100%);
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+}
+
+/* Decorative corner ribbons */
+.corner-ribbon {
+    width: 180px;
+    background: linear-gradient(90deg, #e8491d 60%, #f1c40f 100%);
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: fixed;
+    top: 32px;
+    left: -48px;
+    transform: rotate(-45deg);
+    box-shadow: 0 2px 8px rgba(232,73,29,0.18);
+    z-index: 1002;
+}
+
+/* Section backgrounds */
+section {
+    background: linear-gradient(90deg, #fff 80%, #f1f8ff 100%);
+    border-radius: 12px;
+    margin: 18px 0;
+    padding: 18px 24px;
+    box-shadow: 0 2px 12px rgba(52,152,219,0.06);
+}
+
+/* Enhance buttons for vibrancy */
+#soloist-link, #donate-form button {
+    background: linear-gradient(90deg, #e8491d 60%, #f1c40f 100%);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(232,73,29,0.12);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+#soloist-link:hover, #donate-form button:hover {
+    background: linear-gradient(90deg, #3498db 60%, #9b59b6 100%);
+    box-shadow: 0 4px 16px rgba(52,152,219,0.18);
+}
