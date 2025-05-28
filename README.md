@@ -139,3 +139,4 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 
 To Activate: CLick on index.html.
+Note: This was way better, somewhere it got sabotaged 💯
